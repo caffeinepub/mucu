@@ -1,5 +1,5 @@
 import { Separator } from "@/components/ui/separator";
-import { Instagram, Mail, Sparkles, Twitter } from "lucide-react";
+import { Download, Instagram, Mail, Sparkles, Twitter } from "lucide-react";
 import { motion } from "motion/react";
 
 const socialLinks = [
@@ -47,7 +47,7 @@ export default function App() {
             }}
           />
           <img
-            src="/assets/generated/Mucu-edited.dim_950x1200.png"
+            src="/assets/generated/Mucu-edited-v3.dim_950x1200.png"
             alt="Mucu portrait"
             className="relative w-full aspect-[3/4] object-cover object-top rounded-[16px]"
           />
@@ -109,6 +109,38 @@ export default function App() {
               <Icon size={18} strokeWidth={1.5} />
             </a>
           ))}
+        </motion.div>
+
+        {/* Download button */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.0, duration: 0.6 }}
+          className="mt-5 flex-shrink-0"
+        >
+          <a
+            href="/assets/generated/Mucu-edited-v3.dim_950x1200.png"
+            download="Mucu.png"
+            className="flex items-center gap-2 px-4 py-2 rounded-full text-[11px] tracking-widest uppercase font-body transition-all duration-200"
+            style={{
+              border: "1px solid oklch(var(--gold) / 0.4)",
+              color: "oklch(var(--gold))",
+            }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLAnchorElement).style.background =
+                "oklch(var(--gold) / 0.1)";
+              (e.currentTarget as HTMLAnchorElement).style.borderColor =
+                "oklch(var(--gold))";
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLAnchorElement).style.background = "";
+              (e.currentTarget as HTMLAnchorElement).style.borderColor =
+                "oklch(var(--gold) / 0.4)";
+            }}
+          >
+            <Download size={13} strokeWidth={1.5} />
+            Download Photo
+          </a>
         </motion.div>
 
         {/* Bottom label */}
