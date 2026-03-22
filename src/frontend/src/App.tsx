@@ -47,7 +47,7 @@ export default function App() {
             }}
           />
           <img
-            src="/assets/generated/Mucu-edited-v3.dim_950x1200.png"
+            src="/assets/generated/Mucu-edited-hands.dim_950x950.png"
             alt="Mucu portrait"
             className="relative w-full aspect-[3/4] object-cover object-top rounded-[16px]"
           />
@@ -119,7 +119,7 @@ export default function App() {
           className="mt-5 flex-shrink-0"
         >
           <a
-            href="/assets/generated/Mucu-edited-v3.dim_950x1200.png"
+            href="/assets/generated/Mucu-edited-hands.dim_950x950.png"
             download="Mucu.png"
             className="flex items-center gap-2 px-4 py-2 rounded-full text-[11px] tracking-widest uppercase font-body transition-all duration-200"
             style={{
